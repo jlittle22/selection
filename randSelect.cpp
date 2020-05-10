@@ -41,33 +41,14 @@ void swap(int i, int j, std::vector<int> &v){
 	return;
 }
 
-
-
-// TODO: implement this function
-// target: 3
-// rank : 2 
-// [ 1 7 2 5 9 6 3 7 8 4 ]
-// [ 1 2 3 7 5 9 6 7 8 4 ]
-
-// target: 2
-// rank: 4 
-// [ 6 1 4 2 7 ]
-// Actual: [ 1 4 2 6 7 ]
 int randSelect(std::vector<int> v, int rankIndex) {
-	//cerr << "Current Pre Part Vector: ";
-	//printVector(v);
 	if (v.size() == 0){
 		return 1;
 	}
     int pivot = randomIndex((int)v.size());
     int pivotRank = partition(v, pivot);
-    //cerr << "Post Part around " << v[pivotRank] << ": ";
-    //cerr << "Pivot Rank (actual): " << pivotRank; 
-    //cerr << " Index Rank (desired): " << rankIndex << endl;
-    //printVector(v);
     int sum = 0;
     if (pivotRank == rankIndex){
-    //	cerr << "SOLUTION FOUND " << v[rankIndex];
     	sum = sum + v[rankIndex];
     }
     else if (pivotRank < rankIndex){
