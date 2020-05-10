@@ -1,12 +1,3 @@
-////////////////////////////////////////////////////////////////////////////
-//.   Tufts University, Comp 160 randSelect coding assignment  
-//    randSelect.cpp
-//    randomized selection
-//
-//    includes functions provided and function students need to implement
-//
-////////////////////////////////////////////////////////////////////////////
-
 #include <iostream>
 #include <cstdlib>
 #include <vector>
